@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱的告白</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+     .message {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+     .message h1 {
+            color: #ff69b4;
+        }
+
+     .message p {
+            color: #333;
+        }
+
+     .buttons {
+            margin-top: 30px;
+        }
+
+     .buttons button {
+            padding: 12px 24px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+     .buttons #agree {
+            background-color: #007BFF;
+        }
+
+     .buttons #disagree {
+            background-color: #DC3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message">
+        <h1>亲爱的：XXX</h1>
+        <p>在这个特别的时刻，我想对你说，我喜欢你。从我们第一次相遇，你的笑容就像阳光一样照亮了我的世界。</p >
+        <p>你的每一个眼神、每一句话语，都深深地印在我的心里。我想和你一起走过每一个春夏秋冬，分享生活的喜怒哀乐。</p >
+        <p>你愿意做我的那个特别的人，和我一起开启这段美好的旅程吗？</p >
+        <div class="buttons">
+            <button id="agree">同意</button>
+            <button id="disagree">拒绝</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('disagree').addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('再考虑一下嘛~');
+        });
+
+        document.getElementById('agree').addEventListener('click', function () {
+            alert('太好啦，以后的日子请多多关照！');
+            window.close();
+        });
+    </script>
+</body>
+
+</html>
